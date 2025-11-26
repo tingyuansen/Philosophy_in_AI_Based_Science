@@ -31,11 +31,6 @@ A two-day interdisciplinary workshop exploring how artificial intelligence is re
 - What expertise is needed in the AI era?
 - How should scientific communities organize to foster collaboration?
 
-## Confirmed Speakers
-
-- David Weinberg (The Ohio State University, Astronomy)
-
-
 ## Contact
 
 For more information, please contact the organizers.
