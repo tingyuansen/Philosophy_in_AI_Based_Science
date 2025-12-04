@@ -445,6 +445,123 @@
             opacity: 0.7;
         }
 
+        /* Panel Details Styling */
+        .panel-section {
+            margin-top: 48px;
+        }
+
+        .panel-block {
+            border: 1px solid var(--rule);
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 28px;
+            background: rgba(24, 28, 36, 0.8);
+        }
+
+        .panel-header {
+            margin-bottom: 18px;
+        }
+
+        .panel-time {
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--accent-2);
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .panelist-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .panelist-list li {
+            padding: 6px 14px;
+            background: rgba(112, 181, 255, 0.15);
+            border: 1px solid rgba(112, 181, 255, 0.3);
+            border-radius: 20px;
+            font-size: 0.92rem;
+            color: var(--ink);
+        }
+
+        .talk-item {
+            padding: 16px;
+            background: rgba(241, 180, 95, 0.08);
+            border-left: 3px solid var(--accent);
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
+
+        .talk-title {
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+
+        .talk-speaker {
+            font-size: 0.92rem;
+            color: var(--muted);
+        }
+
+        details {
+            margin-top: 16px;
+            border-top: 1px solid var(--rule);
+            padding-top: 16px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent-2);
+            padding: 8px 0;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        summary:hover {
+            color: var(--accent);
+        }
+
+        summary::marker {
+            content: '';
+        }
+
+        summary::before {
+            content: '▸';
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .example-questions {
+            padding: 16px 20px;
+            margin-top: 12px;
+        }
+
+        .example-questions li {
+            margin-bottom: 12px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
         @media (max-width: 900px) {
             .sheet {
                 padding: 48px 40px 56px;
@@ -503,7 +620,7 @@
                     <li><a href="#overview">Scientific Background</a></li>
                     <li><a href="#organizers">Organizers</a></li>
                     <li><a href="#goals">Workshop Goals</a></li>
-                    <li><a href="#schedule">Workshop Structure</a></li>
+                    <li><a href="#schedule">Detailed Schedule & Speakers</a></li>
                     <li><a href="#speakers">Confirmed Speakers / Panelists</a></li>
                     <li><a href="#registration">Registration</a></li>
                     <li><a href="#support">Financial Support</a></li>
@@ -555,7 +672,7 @@
                 </section>
 
                 <section id="schedule">
-                    <h2>Workshop Structure</h2>
+                    <h2>Detailed Schedule & Speakers</h2>
                     <p>The two-day workshop will be structured around two themes: <strong>"AI Inside the Research Pipeline"</strong> and <strong>"AI and the Scientific Ecosystem"</strong>. Each theme will include multiple subtopics, addressed through talks and discussions by philosophers and scientists. Each session will feature multiple talks followed by Q&amp;A and panel discussions, facilitating productive dialogues and potential collaborations.</p>
 
                     <div class="theme-grid">
@@ -582,15 +699,13 @@
                             </div>
                             
                             <div class="session">
-                                <div class="session-title">9:20 AM - 10:20 AM: Morning Session (Part 1) — Progress and Risks</div>
-                                <div class="leading-questions"><strong>Leading Questions:</strong> What type of scientific progress does AI bring about? A growth of knowledge, solutions to problems, increased understanding, enhancement of abilities, interdisciplinary collaboration, or more? Can the reliance on AI risk any kind of "scientific regress"?</div>
+                                <div class="session-title">Panel 1 — The Goal of Science vs. the Possibilities of AI</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Multiple talks followed by Q&amp;A and panel discussion
-                                    <strong>Topics:</strong>
+                                    <strong>Schedule:</strong>
                                     <ul>
-                                        <li>AI applications in frontier scientific research across domains (astronomy, biology, medicine, environmental science)</li>
-                                        <li>Philosophical perspectives on scientific progress and epistemic values</li>
-                                        <li>Potential risks, limitations, and failure modes of AI in scientific research</li>
+                                        <li><strong>9:20 - 9:40 AM:</strong> Tanya Berger-Wolf — TBD <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>9:40 - 10:00 AM:</strong> Richard Samuels — TBD <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>10:00 - 10:20 AM:</strong> Andre Curtis-Trudel — Talk on AI and Pursuitworthiness <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
                                     </ul>
                                 </div>
                             </div>
@@ -598,35 +713,63 @@
                             <div class="lunch-break">10:20 AM - 11:00 AM — Coffee Break (Join Astronomy Coffee at 10:30)</div>
                             
                             <div class="session">
-                                <div class="session-title">11:00 AM - 12:00 PM: Morning Session (Part 2) — Progress and Risks</div>
+                                <div class="session-title">Panel 1 (Continued)</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Continued talks, Q&amp;A and panel discussion
+                                    <strong>Schedule:</strong>
+                                    <ul>
+                                        <li><strong>11:00 AM - 12:00 PM:</strong> Panel Discussion <em style="color: var(--muted); font-size: 0.9rem;">(Tanya Berger-Wolf, Richard Samuels, Andre Curtis-Trudel)</em></li>
+                                    </ul>
                                 </div>
+                                <details style="margin-top: 16px;">
+                                    <summary>View Discussion Questions</summary>
+                                    <ul class="example-questions question-list">
+                                        <li>What does it mean for science to progress? What's the difference between progress, development, and mere change?</li>
+                                        <li>Has science changed its most important research goals or methodologies due to other tools before AI? Is science experiencing another change as AI becomes increasingly used? How special is AI as a research tool?</li>
+                                        <li>How do we evaluate whether a scientific change is progressive or not? Are there changes that are not progressive?</li>
+                                        <li>Progress is always progress toward a goal or ideal, connecting to the promotion of certain epistemic values. What goals do scientists prioritize and what are some relevant values?</li>
+                                        <li>Does the opacity of AI and the automation of research sacrifice understanding for predictability?</li>
+                                        <li>Are the promises of AI-induced progress similar across research domains? Are there some domains that might benefit more from AI and why?</li>
+                                        <li>What are the distinctions between AI merely facilitating discoveries and AI making discoveries?</li>
+                                    </ul>
+                                </details>
                             </div>
                             
                             <div class="lunch-break">12:00 PM - 1:30 PM — Lunch</div>
                             
                             <div class="session">
-                                <div class="session-title">1:30 PM - 3:00 PM: Afternoon Session (Part 1) — Expertise and Methodology</div>
-                                <div class="leading-questions"><strong>Leading Questions:</strong> What types of domain-specific knowledge, methodological lessons, or AI literacy are needed to use AI smoothly and properly? How do scientists avoid possible biases behind algorithm design and use? What conditions are needed to secure the objectivity of AI-based science?</div>
+                                <div class="session-title">Panel 2 — Philosophical Issues of AI as Research Agents</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Multiple talks followed by Q&amp;A and panel discussion
-                                    <strong>Topics:</strong>
+                                    <strong>Schedule:</strong>
                                     <ul>
-                                        <li>Philosophical analysis of expertise and knowledge-how in using scientific tools</li>
-                                        <li>Methodological strategies and challenges in applying AI across different scientific domains</li>
-                                        <li>Objectivity, bias, and validation in AI-based science</li>
+                                        <li><strong>1:30 - 1:50 PM:</strong> Yuan-Sen Ting — How Do I Shorten My Project Worktime by a Factor of Two Every Semester <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>1:50 - 2:10 PM:</strong> Mel Andrews — AI for Peer Review & the Future of Science? <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>2:10 - 2:30 PM:</strong> Angus Fletcher — TBD <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
                                     </ul>
                                 </div>
                             </div>
                             
-                            <div class="lunch-break">3:00 PM - 3:30 PM — Coffee Break (Open to local visitors)</div>
+                            <div class="lunch-break">2:30 PM - 3:30 PM — Coffee Break (Open to local visitors)</div>
                             
                             <div class="session">
-                                <div class="session-title">3:30 PM - 4:30 PM: Afternoon Session (Part 2) — Expertise and Methodology</div>
+                                <div class="session-title">Panel 2 (Continued)</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Continued talks, Q&amp;A and panel discussion
+                                    <strong>Schedule:</strong>
+                                    <ul>
+                                        <li><strong>3:30 - 4:30 PM:</strong> Panel Discussion <em style="color: var(--muted); font-size: 0.9rem;">(Mel Andrews, Angus Fletcher, Helen Meskhidze, Yuan-Sen Ting)</em></li>
+                                    </ul>
                                 </div>
+                                <details style="margin-top: 16px;">
+                                    <summary>View Discussion Questions</summary>
+                                    <ul class="example-questions question-list">
+                                        <li>What are the current practices of designing AI research agents? What are some successes and pitfalls?</li>
+                                        <li>What are some differences between human and AI styles of cognition and inquiry?</li>
+                                        <li>What roles can AI take in research? Are they like main agents, collaborators, students, educators, arbiters, or instruments? What difference does it make for us to see AI in different roles?</li>
+                                        <li>How do we justify inductive trust in LLM agents? Does its opacity affect our trust? Can we have trust in LLM without understanding it? Does trusting require knowing the mechanisms or prompts?</li>
+                                        <li>As research agents, do LLMs have similar elements like beliefs, desires, and intentions? How does one attribute credit and responsibility to LLMs?</li>
+                                        <li>How are AI agents evaluated against existing scientific norms—replicability, peer review, transparency? Are they still important or need to be revised?</li>
+                                        <li>Is doing science a goal in itself for the person doing it, or is it more important to obtain scientific knowledge, whether done by humans or AI?</li>
+                                    </ul>
+                                </details>
                             </div>
                             
                             <div class="lunch-break">6:00 PM — Conference Dinner or Reception</div>
@@ -644,15 +787,13 @@
                             </div>
                             
                             <div class="session">
-                                <div class="session-title">9:20 AM - 10:20 AM: Morning Session (Part 1) — Collaboration and Segregation</div>
-                                <div class="leading-questions"><strong>Leading Questions:</strong> Are there new collaborative clusters or initiatives that break existing disciplinary boundaries? Is there a segregation between AI-based and non-AI-based scientists? What kind of AI community do we need to provide the necessary infrastructure, tool development, and evaluation for AI-based science in a broader scope?</div>
+                                <div class="session-title">Panel 3 — Scientific Community Dynamics and Resource Distribution</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Multiple talks followed by Q&amp;A and panel discussion
-                                    <strong>Topics:</strong>
+                                    <strong>Schedule:</strong>
                                     <ul>
-                                        <li>Changes in scientific community structure and collaboration patterns</li>
-                                        <li>Philosophical and sociological perspectives on interdisciplinary collaboration</li>
-                                        <li>Infrastructure and institutional models for supporting AI-based science</li>
+                                        <li><strong>9:20 - 9:40 AM:</strong> David Weinberg — AI and the Goals of Science: Exploitation, Understanding, and the Limits of Revolution <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>9:40 - 10:00 AM:</strong> Moh Hosseinioun — AI Reshapes the Practice of Science: Evidence from Two Decades of Research Proposals <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>10:00 - 10:20 AM:</strong> Benjamin Santos Genta (Remote) — No AI Reproducibility? No Problem <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
                                     </ul>
                                 </div>
                             </div>
@@ -660,35 +801,64 @@
                             <div class="lunch-break">10:20 AM - 11:00 AM — Coffee Break (Join Astronomy Coffee at 10:30)</div>
                             
                             <div class="session">
-                                <div class="session-title">11:00 AM - 12:00 PM: Morning Session (Part 2) — Collaboration and Segregation</div>
+                                <div class="session-title">Panel 3 (Continued)</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Continued talks, Q&amp;A and panel discussion
+                                    <strong>Schedule:</strong>
+                                    <ul>
+                                        <li><strong>11:00 AM - 12:00 PM:</strong> Panel Discussion <em style="color: var(--muted); font-size: 0.9rem;">(Moh Hosseinioun, Josh Greenberg, David Weinberg, Andre Curtis-Trudel)</em></li>
+                                    </ul>
                                 </div>
+                                <details style="margin-top: 16px;">
+                                    <summary>View Discussion Questions</summary>
+                                    <ul class="example-questions question-list">
+                                        <li>Is more funding or other institutional resources devoted to research projects that use AI in different scientific disciplines? Who makes the decisions and what are the underlying rationales? Is it expected to be long-term or temporary?</li>
+                                        <li>What are some known costs and gains of AI-based research at the present stage? Does AI-based research generate more outcomes on average? What types of outcomes?</li>
+                                        <li>How are scientists gearing themselves toward developing AI-based research projects? For example, by learning to use AI themselves, collaborating with scientists who use AI, or collaborating with computer scientists? In other words, are there more interdisciplinary research groups?</li>
+                                        <li>How is labor distributed in these research communities? What roles do AI-fluent team members take? How about the credit of research?</li>
+                                        <li>Where are AI-proficient scientists going in their careers? What are the benefits and curses of interdisciplinary identity?</li>
+                                        <li>Are we witnessing a divide between 'compute-rich' and 'compute-poor' science? Are there emerging inequalities or even hierarchies between them?</li>
+                                        <li>What are the different research agendas and tastes of emerging AI centers or initiatives? Are the expectations of AI-based science homogeneous?</li>
+                                    </ul>
+                                </details>
                             </div>
                             
                             <div class="lunch-break">12:00 PM - 1:30 PM — Lunch</div>
                             
                             <div class="session">
-                                <div class="session-title">1:30 PM - 3:00 PM: Afternoon Session (Part 1) — Knowledge Exchange</div>
-                                <div class="leading-questions"><strong>Leading Questions:</strong> How can computer science contribute to building AI tools for scientific purposes? How does the application of AI in the natural sciences help enhance AI's abilities in general and facilitate the understanding of them?</div>
+                                <div class="session-title">Panel 4 — A Toolkit for the Tool: What Do Scientists Need to Use AI Well?</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Multiple talks followed by Q&amp;A and panel discussion
-                                    <strong>Topics:</strong>
+                                    <strong>Schedule:</strong>
                                     <ul>
-                                        <li>Bidirectional knowledge transfer between computer science and domain sciences</li>
-                                        <li>How scientific applications advance AI capabilities and understanding</li>
-                                        <li>Philosophical perspectives on understanding mathematical models, instruments, and AI</li>
+                                        <li><strong>1:30 - 1:50 PM:</strong> Bryan Carstens — TBD <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>1:50 - 2:10 PM:</strong> Kati Kish Bar-On (Remote) — A Tool or A Collaborator? Rethinking Mathematical Intuition, Agency, and Understanding in the Age of AI <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
+                                        <li><strong>2:10 - 2:30 PM:</strong> Siyu Yao — Integration of AI in Science: Beyond "the Illusion of Understanding" toward Pragmatic Understanding <em style="color: var(--muted); font-size: 0.9rem;">(15 min + 5 min Q&A)</em></li>
                                     </ul>
                                 </div>
                             </div>
                             
-                            <div class="lunch-break">3:00 PM - 3:30 PM — Coffee Break (Open to local visitors)</div>
+                            <div class="lunch-break">2:30 PM - 3:30 PM — Coffee Break (Open to local visitors)</div>
                             
                             <div class="session">
-                                <div class="session-title">3:30 PM - 4:30 PM: Afternoon Session (Part 2) — Knowledge Exchange</div>
+                                <div class="session-title">Panel 4 (Continued)</div>
                                 <div class="topics">
-                                    <strong>Format:</strong> Continued talks, Q&amp;A and panel discussion
+                                    <strong>Schedule:</strong>
+                                    <ul>
+                                        <li><strong>3:30 - 4:30 PM:</strong> Panel Discussion <em style="color: var(--muted); font-size: 0.9rem;">(Bryan Carstens, Siyu Yao, Eric Fosler-Lussier)</em></li>
+                                    </ul>
                                 </div>
+                                <details style="margin-top: 16px;">
+                                    <summary>View Discussion Questions</summary>
+                                    <ul class="example-questions question-list">
+                                        <li>What counts as AI fluency/literacy? What kinds of knowledge or expertise do scientists need in order to use a new tool like AI?</li>
+                                        <li>What kind of scientists do we expect to play a leading role in the future AI-based research?</li>
+                                        <li>What kinds of scientific judgment cannot be automated, and how can scientists cultivate those skills to work alongside AI?</li>
+                                        <li>What kinds of data infrastructures—curation, metadata, provenance tracking—are essential for meaningful AI use in real scientific contexts?</li>
+                                        <li>What are the minimal infrastructural standards (documentation, reproducibility pipelines, version control) that allow AI results to be trusted?</li>
+                                        <li>Narratives, or telling good stories, are important to science. What does a good scientific story require? Are narratives always human? How well can AI do it?</li>
+                                        <li>How do scientists decide when AI is an exploratory tool versus when it becomes a part of the evidential chain?</li>
+                                        <li>How does the opacity of AI complicate peer review and open science?</li>
+                                    </ul>
+                                </details>
                             </div>
                             
                             <div style="padding: 12px 20px; margin-top: 16px; color: var(--accent); font-size: 0.9rem; letter-spacing: 0.08em;">
@@ -716,6 +886,10 @@
                         <li style="padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--accent);">·</span>
                             <strong style="color: var(--ink);">Moh Hosseinioun</strong>, Computational Social Science, Northwestern University
+                        </li>
+                        <li style="padding-left: 20px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent);">·</span>
+                            <strong style="color: var(--ink);">Josh Greenberg</strong>, Alfred P. Sloan Foundation
                         </li>
                         <li style="padding-left: 20px; position: relative;">
                             <span style="position: absolute; left: 0; color: var(--accent);">·</span>
