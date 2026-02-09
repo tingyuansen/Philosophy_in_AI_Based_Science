@@ -1,5 +1,7 @@
 # Philosophy Sees the Algorithm: Reconsidering Knowledge and Community in AI-Based Science
 
+### **[Workshop Website](https://tingyuansen.github.io/Philosophy_in_AI_Based_Science/)**
+
 ## Workshop Overview
 
 An interdisciplinary dialogue on the transformation of scientific practice — exploring how artificial intelligence is reshaping scientific knowledge generation and community organization.
@@ -59,5 +61,3 @@ This workshop is supported by:
 - UC Center for Humanities and Technology, University of Cincinnati
 
 ---
-
-**[View Full Workshop Details](https://tingyuansen.github.io/Philosophy_in_AI_Based_Science/)**
